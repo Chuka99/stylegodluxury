@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Shop — Stylegod</title>
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <script type="module" src="assets/js/app.js"></script>
+</head>
+<body>
+
+<header class="header">
+  <div class="container nav">
+    <a class="brand" href="index.html">
+      <div class="brandMark"></div>
+      <div class="brandText">
+        <b class="brandName">Stylegod</b>
+        <span class="brandTagline">Soft Luxury. Class in every step.</span>
+      </div>
+    </a>
+
+    <nav class="links">
+      <a href="index.html">Home</a>
+      <a class="active" href="shop.html">Shop</a>
+      <a href="blog.html">Blog</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <div class="actions">
+      <a class="btn btnGhost linkIG" href="#" target="_blank" rel="noreferrer">Instagram</a>
+      <a class="btn btnGhost linkTikTok" href="#" target="_blank" rel="noreferrer">TikTok</a>
+      <button class="btn cartBtn" id="openCart" type="button">
+        Cart <span class="badge" id="cartCount">0</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main class="container section">
+  <div class="sectionHead">
+    <div>
+      <div class="sectionTitle">Shop</div>
+      <div class="sectionNote">Feminine wears + hair products. Checkout via WhatsApp in ₦.</div>
+    </div>
+  </div>
+
+  <div class="shopHead">
+    <div class="filters" id="categoryFilters"></div>
+    <input class="search" id="shopSearch" placeholder="Search products (dress, hair, blazer...)" />
+  </div>
+
+  <div class="productGrid" id="productGrid"></div>
+</main>
+
+<footer class="footer">
+  <div class="container footerGrid">
+    <div>© <span id="year"></span> <span class="brandName">Stylegod</span></div>
+    <div class="smallLinks">
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Contact</a>
+      <a class="linkIG" href="#" target="_blank" rel="noreferrer">Instagram</a>
+      <a class="linkTikTok" href="#" target="_blank" rel="noreferrer">TikTok</a>
+    </div>
+  </div>
+</footer>
+
+<aside class="cartPanel" id="cartPanel" aria-label="Cart">
+  <div class="cartHeader">
+    <h3>Your cart</h3>
+    <button class="modalClose" id="closeCart" type="button">Close</button>
+  </div>
+  <div class="cartBody" id="cartItems"></div>
+  <div class="cartFooter">
+    <div class="cartTotalRow">
+      <div>Total</div>
+      <div><span id="cartTotal">₦0.00</span></div>
+    </div>
+    <button class="btn btnPrimary" id="checkoutBtn" type="button" style="width:100%;">Checkout on WhatsApp</button>
+  </div>
+</aside>
+
+<div class="modal" id="modal" aria-label="Product details">
+  <div class="modalBox">
+    <div class="modalTop">
+      <b>Details</b>
+      <button class="modalClose" id="modalClose" type="button">Close</button>
+    </div>
+    <div class="modalContent" id="modalContent"></div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Stylegod — Soft Luxury</title>
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <script type="module" src="assets/js/app.js"></script>
+</head>
+<body>
+
+<header class="header">
+  <div class="container nav">
+    <a class="brand" href="index.html">
+      <div class="brandMark"></div>
+      <div class="brandText">
+        <b class="brandName">Stylegod</b>
+        <span class="brandTagline">Soft Luxury. Class in every step.</span>
+      </div>
+    </a>
+
+    <nav class="links">
+      <a class="active" href="index.html">Home</a>
+      <a href="shop.html">Shop</a>
+      <a href="blog.html">Blog</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <div class="actions">
+      <a class="btn btnGhost linkIG" href="#" target="_blank" rel="noreferrer">Instagram</a>
+      <a class="btn btnGhost linkTikTok" href="#" target="_blank" rel="noreferrer">TikTok</a>
+      <button class="btn cartBtn" id="openCart" type="button">
+        Cart <span class="badge" id="cartCount">0</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main class="container">
+  <section class="hero">
+    <div class="heroGrid">
+      <div class="heroCard">
+        <div class="kicker">FEMININE • SOFT LUXURY • GODFIDENCE</div>
+        <h1 class="h1">Feminine style.<br/>Hair glow.<br/>Class always.</h1>
+        <p class="sub">
+          Personal brand + shop curated for feminine wears and hair essentials — with WhatsApp checkout in Naira.
+        </p>
+        <div class="heroBtns">
+          <a class="btn btnPrimary" href="shop.html">Shop now</a>
+          <a class="btn" href="blog.html">Read the blog</a>
+          <a class="btn btnGhost" href="gallery.html">View gallery</a>
+        </div>
+
+        <div class="points">
+          <span class="pill">Style Consultant</span>
+          <span class="pill">Corporate + Occasion</span>
+          <span class="pill">WhatsApp Checkout</span>
+        </div>
+      </div>
+
+      <div class="heroMedia">
+        <img src="assets/img/hero.jpg" alt="Stylegod hero" />
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="sectionHead">
+      <div>
+        <div class="sectionTitle">Featured looks</div>
+        <div class="sectionNote">Inspired by your Instagram content.</div>
+      </div>
+      <a class="btn linkIG" href="#" target="_blank" rel="noreferrer">See more on IG</a>
+    </div>
+    <div class="grid4" id="looksGrid"></div>
+  </section>
+
+  <section class="section">
+    <div class="sectionHead">
+      <div>
+        <div class="sectionTitle">Shop highlights</div>
+        <div class="sectionNote">Prices in ₦ • Checkout goes to WhatsApp.</div>
+      </div>
+      <a class="btn btnPrimary" href="shop.html">Go to shop</a>
+    </div>
+    <div class="productGrid" id="productGrid"></div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container footerGrid">
+    <div>
+      <b class="brandName">Stylegod</b> • <span class="brandTagline">Soft Luxury. Class in every step.</span>
+      <div style="margin-top:8px;">© <span id="year"></span> Stylegod</div>
+    </div>
+    <div class="smallLinks">
+      <a href="shop.html">Shop</a>
+      <a href="blog.html">Blog</a>
+      <a class="linkIG" href="#" target="_blank" rel="noreferrer">Instagram</a>
+      <a class="linkTikTok" href="#" target="_blank" rel="noreferrer">TikTok</a>
+    </div>
+  </div>
+</footer>
+
+<!-- Cart Panel -->
+<aside class="cartPanel" id="cartPanel" aria-label="Cart">
+  <div class="cartHeader">
+    <h3>Your cart</h3>
+    <button class="modalClose" id="closeCart" type="button">Close</button>
+  </div>
+  <div class="cartBody" id="cartItems"></div>
+  <div class="cartFooter">
+    <div class="cartTotalRow">
+      <div>Total</div>
+      <div><span id="cartTotal">₦0.00</span></div>
+    </div>
+    <button class="btn btnPrimary" id="checkoutBtn" type="button" style="width:100%;">Checkout on WhatsApp</button>
+  </div>
+</aside>
+
+<!-- Product Modal -->
+<div class="modal" id="modal" aria-label="Product details">
+  <div class="modalBox">
+    <div class="modalTop">
+      <b>Details</b>
+      <button class="modalClose" id="modalClose" type="button">Close</button>
+    </div>
+    <div class="modalContent" id="modalContent"></div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+</body>
+</html>

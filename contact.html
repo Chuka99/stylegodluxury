@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact — Stylegod</title>
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <script type="module" src="assets/js/app.js"></script>
+</head>
+<body>
+
+<header class="header">
+  <div class="container nav">
+    <a class="brand" href="index.html">
+      <div class="brandMark"></div>
+      <div class="brandText">
+        <b class="brandName">Stylegod</b>
+        <span class="brandTagline">Soft Luxury. Class in every step.</span>
+      </div>
+    </a>
+
+    <nav class="links">
+      <a href="index.html">Home</a>
+      <a href="shop.html">Shop</a>
+      <a href="blog.html">Blog</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="about.html">About</a>
+      <a class="active" href="contact.html">Contact</a>
+    </nav>
+
+    <div class="actions">
+      <a class="btn btnGhost linkIG" href="#" target="_blank" rel="noreferrer">Instagram</a>
+      <a class="btn btnGhost linkTikTok" href="#" target="_blank" rel="noreferrer">TikTok</a>
+      <button class="btn cartBtn" id="openCart" type="button">
+        Cart <span class="badge" id="cartCount">0</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main class="container section">
+  <div class="sectionHead">
+    <div>
+      <div class="sectionTitle">Contact</div>
+      <div class="sectionNote">Styling • collaborations • orders • enquiries</div>
+    </div>
+  </div>
+
+  <div style="display:grid; grid-template-columns: 1fr .9fr; gap: 14px;">
+    <form class="form" id="contactForm">
+      <div class="field">
+        <label for="cName">Name</label>
+        <input id="cName" required placeholder="Your name" />
+      </div>
+      <div class="field">
+        <label for="cEmail">Email</label>
+        <input id="cEmail" type="email" required placeholder="you@email.com" />
+      </div>
+      <div class="field">
+        <label for="cMsg">Message</label>
+        <textarea id="cMsg" placeholder="Tell me what you need..."></textarea>
+      </div>
+      <button class="btn btnPrimary" type="submit">Send message</button>
+      <div class="finePrint">This form shows confirmation. WhatsApp button sends you directly.</div>
+    </form>
+
+    <div class="heroCard">
+      <div class="kicker">WHATSAPP</div>
+      <h2 class="h1" style="font-size: 28px;">Let’s talk style.</h2>
+      <p class="sub">
+        WhatsApp: <b id="waNumber">+2348012345678</b><br/>
+        Use Shop → Checkout to send your cart automatically.
+      </p>
+      <div class="heroBtns" style="margin-top: 14px;">
+        <button class="btn btnPrimary" id="whatsappBtn" type="button">Message on WhatsApp</button>
+        <a class="btn" href="shop.html">Shop</a>
+        <a class="btn btnGhost" href="blog.html">Read blog</a>
+      </div>
+
+      <div class="points" style="margin-top:14px;">
+        <a class="pill linkIG" href="#" target="_blank" rel="noreferrer">Instagram</a>
+        <a class="pill linkTikTok" href="#" target="_blank" rel="noreferrer">TikTok</a>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container footerGrid">
+    <div>© <span id="year"></span> <span class="brandName">Stylegod</span></div>
+    <div class="smallLinks">
+      <a href="shop.html">Shop</a>
+      <a href="blog.html">Blog</a>
+      <a class="linkIG" href="#" target="_blank" rel="noreferrer">Instagram</a>
+      <a class="linkTikTok" href="#" target="_blank" rel="noreferrer">TikTok</a>
+    </div>
+  </div>
+</footer>
+
+<aside class="cartPanel" id="cartPanel" aria-label="Cart">
+  <div class="cartHeader">
+    <h3>Your cart</h3>
+    <button class="modalClose" id="closeCart" type="button">Close</button>
+  </div>
+  <div class="cartBody" id="cartItems"></div>
+  <div class="cartFooter">
+    <div class="cartTotalRow">
+      <div>Total</div>
+      <div><span id="cartTotal">₦0.00</span></div>
+    </div>
+    <button class="btn btnPrimary" id="checkoutBtn" type="button" style="width:100%;">Checkout on WhatsApp</button>
+  </div>
+</aside>
+
+<div class="toast" id="toast"></div>
+</body>
+</html>
